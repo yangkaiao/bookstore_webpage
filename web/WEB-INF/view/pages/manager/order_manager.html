@@ -4,25 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../../../static/css/minireset.css" />
-    <link rel="stylesheet" href="../../../static/css/common.css" />
-    <link rel="stylesheet" href="../../../static/css/cart.css" />
-    <link rel="stylesheet" href="../../../static/css/bookManger.css" />
-    <link rel="stylesheet" href="../../../static/css/orderManger.css" />
+    <link rel="stylesheet" th:href="@{static/css/minireset.css}" />
+    <link rel="stylesheet" th:href="@{static/css/common.css}" />
+    <link rel="stylesheet" th:href="@{static/css/cart.css}" />
+    <link rel="stylesheet" th:href="@{static/css/bookManger.css}" />
+    <link rel="stylesheet" th:href="@{static/css/orderManger.css}" />
   </head>
   <body>
     <div class="header">
       <div class="w">
         <div class="header-left">
-          <a href="../../../index.html">
-            <img src="../../../static/img/logo.gif" alt=""
+          <a th:href="@{bookstore(method='index')}">
+            <img th:src="@{static/img/logo.gif}" alt=""
           /></a>
           <h1>订单管理系统</h1>
         </div>
         <div class="header-right">
-          <a href="book_manager.html" class="order">图书管理</a>
-          <a href="#" class="destory">订单管理</a>
-          <a href="../../../index.html" class="gohome">返回商城</a>
+          <a th:href="@{bookstore(method='book_manager')}" class="order">图书管理</a>
+          <a th:href="@{bookstore(method='order_manager')}">订单管理</a>
+          <a th:href="@{bookstore(method='index')}" class="gohome">返回商城</a>
         </div>
       </div>
     </div>
@@ -99,19 +99,19 @@
           <ul>
             <li>
               <a href="">
-                <img src="../../../static/img/bottom1.png" alt="" />
+                <img src="../../static/img/bottom1.png" alt="" />
                 <span>售后服务</span>
               </a>
             </li>
             <li>
               <a href="">
-                <img src="../../../static/img/bottom.png" alt="" />
+                <img src="../../static/img/bottom.png" alt="" />
                 <span>物流服务</span>
               </a>
             </li>
             <li>
               <a href="">
-                <img src="../../../static/img/bottom2.png" alt="" />
+                <img src="../../static/img/bottom2.png" alt="" />
                 <span>联系电话</span>
               </a>
             </li>

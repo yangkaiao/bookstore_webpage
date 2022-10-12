@@ -4,27 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../../../static/css/minireset.css" />
-    <link rel="stylesheet" href="../../../static/css/common.css" />
-    <link rel="stylesheet" href="../../../static/css/style.css" />
-    <link rel="stylesheet" href="../../../static/css/cart.css" />
-    <link rel="stylesheet" href="../../../static/css/bookManger.css" />
-    <link rel="stylesheet" href="../../../static/css/register.css" />
-    <link rel="stylesheet" href="../../../static/css/book_edit.css" />
+    <link rel="stylesheet" th:href="@{static/css/minireset.css}" />
+    <link rel="stylesheet" th:href="@{static/css/common.css}" />
+    <link rel="stylesheet" th:href="@{static/css/style.css}" />
+    <link rel="stylesheet" th:href="@{static/css/cart.css}" />
+    <link rel="stylesheet" th:href="@{static/css/bookManger.css}" />
+    <link rel="stylesheet" th:href="@{static/css/register.css}" />
+    <link rel="stylesheet" th:href="@{static/css/book_edit.css}" />
   </head>
   <body>
     <div class="header">
       <div class="w">
         <div class="header-left">
-          <a href="../../../index.html">
-            <img src="../../../static/img/logo.gif" alt=""
+          <a href="../../index.html">
+            <img th:src="@{static/img/logo.gif}" alt=""
           /></a>
           <h1>编辑图书</h1>
         </div>
         <div class="header-right">
-          <a href="book_manager.html" class="order">图书管理</a>
-          <a href="order_manager.html" class="destory">订单管理</a>
-          <a href="../../../index.html" class="gohome">返回商城</a>
+          <a th:href="@{bookstore(method='book_manager')}" >图书管理</a>
+          <a th:href="@{bookstore(method='order_manager')}">订单管理</a>
+          <a th:href="@{bookstore(method='index')}">返回商城</a>
         </div>
       </div>
     </div>
