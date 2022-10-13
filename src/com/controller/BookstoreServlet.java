@@ -19,6 +19,9 @@ public class BookstoreServlet extends ViewBaseServlet{
         if ("cart".equals(req.getParameter("method").toString())){
             processTemplate("pages/cart/cart",req,resp);
         }
+        if ("checkout".equals(req.getParameter("method").toString())){
+            processTemplate("pages/cart/checkout",req,resp);
+        }
         if ("Bookmanager".equals(req.getParameter("method").toString())){
             processTemplate("pages/manager/book_manager",req,resp);
         }
@@ -40,5 +43,6 @@ public class BookstoreServlet extends ViewBaseServlet{
         if ("book_manager".equals(req.getParameter("method").toString())){
             processTemplate("pages/manager/book_manager",req,resp);
         }
+
     }
 }
